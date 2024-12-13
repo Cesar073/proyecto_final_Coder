@@ -1,0 +1,23 @@
+{% extends 'AppCoder/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+    
+
+
+<form method="POST">
+    {% csrf_token %}
+    Estas seguro/a {{ object }}
+    <input type="submit" value="Borrar">
+</form>
+<button type="button" class="btn btn-dark"><a href="{% url 'ProfesorList' %}">Regresar</a></button>
+
+
+
+
+{% endblock main %}
+
+
